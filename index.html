@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNEcode Cyber Security Club</title>
+    <title>UNECSC Cyber Security Club</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Simple dark theme with neon accents */
+        /* Dark theme with neon accents */
         body {
             background-color: #0d0d0d;
-            color: #00ff00; /* Neon green for text */
-            font-family: "Courier New", Courier, monospace; /* Hacker-style font */
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
         }
 
         h1, h2, h3 {
@@ -25,7 +25,7 @@
         }
 
         a:hover {
-            color: #ff0000; /* Red for hovered links */
+            color: #ff0000;
         }
 
         header {
@@ -72,116 +72,52 @@
             border-top: 2px solid #00ff00;
         }
 
+        /* Glitch effect for "Website Under Construction" */
         .glitch {
-            font-size: 1.5rem;
+            font-size: 2rem;
             position: relative;
             color: #00ff00;
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .glitch:before, .glitch:after {
             content: "WEBSITE UNDER CONSTRUCTION";
             position: absolute;
-            left: 2px;
+            left: 0;
             text-shadow: -2px 0 #ff0000;
             top: 0;
             color: #00ff00;
             overflow: hidden;
             clip: rect(0, 900px, 0, 0);
-            animation: glitch 1s infinite linear alternate-reverse;
+            animation: glitch 2.5s infinite linear alternate-reverse;
         }
 
         .glitch:after {
-            left: -2px;
+            left: 0;
             text-shadow: -2px 0 #00ffff;
-            animation-delay: .5s;
+            animation-delay: 1.25s;
         }
 
         @keyframes glitch {
-            0% {
-                clip: rect(42px, 9999px, 44px, 0);
-            }
-            5% {
-                clip: rect(12px, 9999px, 85px, 0);
-            }
-            10% {
-                clip: rect(43px, 9999px, 19px, 0);
-            }
-            15% {
-                clip: rect(63px, 9999px, 39px, 0);
-            }
-            20% {
-                clip: rect(22px, 9999px, 69px, 0);
-            }
-            25% {
-                clip: rect(12px, 9999px, 9px, 0);
-            }
-            30% {
-                clip: rect(82px, 9999px, 59px, 0);
-            }
-            35% {
-                clip: rect(92px, 9999px, 79px, 0);
-            }
-            40% {
-                clip: rect(19px, 9999px, 79px, 0);
-            }
-            45% {
-                clip: rect(12px, 9999px, 89px, 0);
-            }
-            50% {
-                clip: rect(11px, 9999px, 59px, 0);
-            }
-            55% {
-                clip: rect(18px, 9999px, 49px, 0);
-            }
-            60% {
-                clip: rect(23px, 9999px, 99px, 0);
-            }
-            65% {
-                clip: rect(52px, 9999px, 29px, 0);
-            }
-            70% {
-                clip: rect(61px, 9999px, 49px, 0);
-            }
-            75% {
-                clip: rect(22px, 9999px, 69px, 0);
-            }
-            80% {
-                clip: rect(72px, 9999px, 49px, 0);
-            }
-            85% {
-                clip: rect(11px, 9999px, 39px, 0);
-            }
-            90% {
-                clip: rect(15px, 9999px, 79px, 0);
-            }
-            95% {
-                clip: rect(32px, 9999px, 59px, 0);
-            }
-            100% {
-                clip: rect(41px, 9999px, 69px, 0);
-            }
-        }
-
-        /* Neon glow effect for the construction text */
-        .glitch {
-            color: #00ff00;
-            position: relative;
-        }
-
-        .glitch:before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 2px;
-            color: #ff0000;
-            z-index: -1;
-            text-shadow: 2px 0 #00ff00;
+            0% { clip: rect(42px, 9999px, 44px, 0); }
+            10% { clip: rect(12px, 9999px, 85px, 0); }
+            20% { clip: rect(43px, 9999px, 19px, 0); }
+            30% { clip: rect(63px, 9999px, 39px, 0); }
+            40% { clip: rect(22px, 9999px, 69px, 0); }
+            50% { clip: rect(12px, 9999px, 9px, 0); }
+            60% { clip: rect(82px, 9999px, 59px, 0); }
+            70% { clip: rect(92px, 9999px, 79px, 0); }
+            80% { clip: rect(19px, 9999px, 79px, 0); }
+            90% { clip: rect(12px, 9999px, 89px, 0); }
+            100% { clip: rect(11px, 9999px, 59px, 0); }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to UNEcode Cyber Security Club</h1>
+        <h1>Welcome to UNECSC Cyber Security Club</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -196,15 +132,15 @@
             <h2>About Us</h2>
             <p>
                 <strong>"Building a Secure Tomorrow, Today."</strong><br>
-                We are UNEcode, a student-run cybersecurity club at the University of New England.<br>
-                Our mission is to promote cybersecurity awareness and provide valuable hands-on experience through hacking challenges, workshops, and projects. 
-                <br>Whether you're a student or a guest, you're welcome to explore and enhance your cyber defense skills with us.
+                We are UNECSC, a student-run cybersecurity club at the University of New England.<br>
+                Our mission is to promote cybersecurity awareness and provide valuable hands-on experience through hacking challenges, workshops, and projects.<br>
+                Whether you're a student or a guest, you're welcome to explore and enhance your cyber defense skills with us.
             </p>
             <h3 class="glitch" data-text="WEBSITE UNDER CONSTRUCTION">WEBSITE UNDER CONSTRUCTION</h3>
         </section>
     </main>
     <footer>
-        <p>© 2024 UNEcode Cyber Security Club</p>
+        <p>© 2024 UNECSC Cyber Security Club</p>
     </footer>
 </body>
 </html>
