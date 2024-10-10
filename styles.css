@@ -1,3 +1,4 @@
+/* General body styles */
 body {
     background-color: black;
     color: green;
@@ -27,6 +28,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: red;
+}
+
 main {
     padding: 2rem;
 }
@@ -35,4 +40,63 @@ footer {
     text-align: center;
     padding: 1rem;
     border-top: 1px solid green;
+}
+
+/* Section styling */
+section {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid green;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #1a1a1a;
+}
+
+/* Glitch effect for "Website Under Construction" */
+.glitch {
+    font-size: 2rem;
+    position: relative;
+    color: green;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.glitch:before, .glitch:after {
+    content: "WEBSITE UNDER CONSTRUCTION";
+    position: absolute;
+    left: 0;
+    text-shadow: -2px 0 red;
+    top: 0;
+    color: green;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch 2.5s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+    left: 0;
+    text-shadow: -2px 0 cyan;
+    animation-delay: 1.25s;
+}
+
+@keyframes glitch {
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    10% { clip: rect(12px, 9999px, 85px, 0); }
+    20% { clip: rect(43px, 9999px, 19px, 0); }
+    30% { clip: rect(63px, 9999px, 39px, 0); }
+    40% { clip: rect(22px, 9999px, 69px, 0); }
+    50% { clip: rect(12px, 9999px, 9px, 0); }
+    60% { clip: rect(82px, 9999px, 59px, 0); }
+    70% { clip: rect(92px, 9999px, 79px, 0); }
+    80% { clip: rect(19px, 9999px, 79px, 0); }
+    90% { clip: rect(12px, 9999px, 89px, 0); }
+    100% { clip: rect(11px, 9999px, 59px, 0); }
 }
