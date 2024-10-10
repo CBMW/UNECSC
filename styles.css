@@ -1,16 +1,20 @@
 /* General body styles */
 body {
-    background-color: black;
+    background: linear-gradient(145deg, #0d0d0d, #000000);
     color: green;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px green;
 }
 
 header {
     text-align: center;
     padding: 1rem;
     border-bottom: 1px solid green;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
 }
 
 nav ul {
@@ -26,20 +30,25 @@ nav ul li {
 nav ul li a {
     color: green;
     text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: red;
+    text-shadow: 0 0 5px red, 0 0 10px red;
 }
 
 main {
     padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
 footer {
     text-align: center;
     padding: 1rem;
     border-top: 1px solid green;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Section styling */
@@ -52,11 +61,12 @@ section {
 ul li {
     padding: 10px;
     border-bottom: 1px solid green;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul li:hover {
     background-color: #1a1a1a;
+    color: #00ff00;
 }
 
 /* Glitch effect for "Website Under Construction" */
@@ -67,23 +77,23 @@ ul li:hover {
     display: inline-block;
     margin: 0 auto;
     text-align: center;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    animation: flicker 1.5s infinite alternate;
 }
 
 .glitch:before, .glitch:after {
     content: "WEBSITE UNDER CONSTRUCTION";
     position: absolute;
     left: 0;
-    text-shadow: -2px 0 red;
-    top: 0;
     color: green;
-    overflow: hidden;
+    text-shadow: -2px 0 red, 0 2px cyan;
     clip: rect(0, 900px, 0, 0);
     animation: glitch 2.5s infinite linear alternate-reverse;
 }
 
 .glitch:after {
     left: 0;
-    text-shadow: -2px 0 cyan;
+    text-shadow: -2px 0 cyan, 2px 0 red;
     animation-delay: 1.25s;
 }
 
@@ -99,4 +109,10 @@ ul li:hover {
     80% { clip: rect(19px, 9999px, 79px, 0); }
     90% { clip: rect(12px, 9999px, 89px, 0); }
     100% { clip: rect(11px, 9999px, 59px, 0); }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
