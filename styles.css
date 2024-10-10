@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px green;
+    text-shadow: 0 0 3px #00ff00, 0 0 7px #00ff00; /* Reduced glow */
 }
 
 header {
@@ -30,6 +30,7 @@ nav ul li {
 nav ul li a {
     color: green;
     text-decoration: none;
+    text-shadow: 0 0 3px green, 0 0 7px green; /* Reduced link glow */
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -49,6 +50,7 @@ footer {
     padding: 1rem;
     border-top: 1px solid green;
     background-color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 3px #00ff00, 0 0 5px #00ff00; /* Reduced footer glow */
 }
 
 /* Section styling */
@@ -77,7 +79,7 @@ ul li:hover {
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Reduced glitch text glow */
     animation: flicker 1.5s infinite alternate;
 }
 
