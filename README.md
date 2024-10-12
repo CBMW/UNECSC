@@ -20,16 +20,16 @@ Welcome to the official repository for the University of New England Cyber Secur
 - **Description:** Update index.html
 - **Last Updated:** Oct 11, 2024
 
-### main.py
-- **Description:** Python program to automate club activities
-- **Last Updated:** Oct 12, 2024
-
 ### projects.html
 - **Description:** Update projects.html
 - **Last Updated:** Oct 11, 2024
 
 ### styles.css
 - **Description:** Styles for the website
+
+### main.py
+- **Description:** Python program to automate club activities
+- **Last Updated:** Oct 12, 2024
 
 ## Contact
 
