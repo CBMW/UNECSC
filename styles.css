@@ -2,36 +2,25 @@
 body {
     background: linear-gradient(145deg, #0d0d0d, #000000);
     background-size: cover;
-    background-position: 0 0;
     color: #00ff33; /* Brighter neon green */
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    overflow: auto; /* Fix for mobile scrolling */
-    height: 100vh; /* Ensures the entire height of the page is covered */
-    animation: scrollBackground 10s linear infinite; /* Infinite scrolling background */
+    overflow: auto; /* Allow scrolling */
+    min-height: 100vh;
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Stronger glowing effect */
 }
 
-@keyframes scrollBackground {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 1000px; /* Adjust for speed of scroll */
-    }
-}
-
-/* Adjust fixed positions and z-index for better menu interaction */
+/* Adjust header and z-index for better menu interaction */
 header {
-    position: relative; /* Remove fixed to allow proper scrolling on mobile */
-    z-index: 10;
+    position: relative;
+    z-index: 10; /* Ensure header stays on top */
     text-align: center;
     padding: 1rem;
     border-bottom: 1px solid #00ff33;
-    background-color: rgba(0, 0, 0, 0.85); /* Increased background opacity for better contrast */
+    background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
-    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Brighter shadow for the header */
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
 }
 
 nav ul {
@@ -46,33 +35,33 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00ff33; /* Brighter neon green */
+    color: #00ff33;
     text-decoration: none;
-    text-shadow: 0 0 3px #00ff33, 0 0 6px #00ff33; /* Brighter text shadow for links */
+    text-shadow: 0 0 3px #00ff33, 0 0 6px #00ff33;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: red;
-    text-shadow: 0 0 5px red; /* Stronger hover effect */
+    text-shadow: 0 0 5px red;
 }
 
 main {
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.85); /* Increased opacity of the background for better contrast */
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 100px;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    margin-top: 100px; /* Added margin to give space for header */
 }
 
 footer {
-    position: relative; /* Removed fixed positioning */
     text-align: center;
     padding: 1rem;
     border-top: 1px solid #00ff33;
-    background-color: rgba(0, 0, 0, 0.85); /* Increased opacity */
-    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Softer and brighter footer text shadow */
-    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
     width: 100%;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 /* Section styling */
@@ -80,30 +69,18 @@ section {
     margin: 50px auto;
     width: 80%;
     text-align: center;
-    z-index: 1;
 }
 
-ul li {
-    padding: 10px;
-    border-bottom: 1px solid #00ff33;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-ul li:hover {
-    background-color: #1a1a1a;
-    color: #00ff33;
-}
-
-/* Glitch effect for "Website Under Construction" */
+/* Adjust the glitch effect */
 .glitch {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     position: relative;
-    color: #00ff33; /* Brighter neon green */
+    color: #00ff33;
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 3px #00ff33, 0 0 5px #00ff33; /* Reduced the blur on the glitch effect */
-    animation: flicker 1.5s infinite alternate; /* Slower flicker */
+    text-shadow: 0 0 2px #00ff33, 0 0 4px #00ff33; /* Reduced the blur on the glitch effect */
+    animation: flicker 2.5s infinite alternate; /* Slow down flicker */
 }
 
 .glitch:before, .glitch:after {
@@ -113,13 +90,13 @@ ul li:hover {
     color: green;
     text-shadow: -1px 0 red, 1px 0 cyan;
     clip: rect(0, 900px, 0, 0);
-    animation: glitch 2.5s infinite linear alternate-reverse; /* Slower glitch */
+    animation: glitch 3s infinite linear alternate-reverse; /* Slow down glitch */
 }
 
 .glitch:after {
     left: 2px;
     text-shadow: -1px 0 cyan, 1px 0 red;
-    animation-delay: 1s; /* Reduced delay to make it less aggressive */
+    animation-delay: 1.5s;
 }
 
 @keyframes glitch {
@@ -128,16 +105,8 @@ ul li:hover {
     10% { clip: rect(43px, 9999px, 19px, 0); transform: skew(-0.5deg); }
     15% { clip: rect(63px, 9999px, 39px, 0); transform: skew(0.7deg); }
     20% { clip: rect(22px, 9999px, 69px, 0); transform: skew(-0.3deg); }
-    25% { clip: rect(12px, 9999px, 9px, 0); transform: skew(0.4deg); }
     30% { clip: rect(82px, 9999px, 59px, 0); transform: skew(-0.4deg); }
-    35% { clip: rect(92px, 9999px, 79px, 0); transform: skew(0.5deg); }
-    40% { clip: rect(19px, 9999px, 79px, 0); transform: skew(-0.7deg); }
-    45% { clip: rect(12px, 9999px, 89px, 0); transform: skew(0.6deg); }
-    50% { clip: rect(11px, 9999px, 59px, 0); transform: skew(-0.2deg); }
-    60% { clip: rect(8px, 9999px, 35px, 0); transform: skew(0.6deg); }
-    70% { clip: rect(23px, 9999px, 90px, 0); transform: skew(-0.4deg); }
-    80% { clip: rect(15px, 9999px, 45px, 0); transform: skew(0.3deg); }
-    90% { clip: rect(25px, 9999px, 55px, 0); transform: skew(-0.6deg); }
+    40% { clip: rect(19px, 9999px, 79px, 0); transform: skew(0.5deg); }
     100% { clip: rect(5px, 9999px, 30px, 0); transform: skew(0.7deg); }
 }
 
@@ -163,28 +132,22 @@ ul li:hover {
     }
 
     .glitch {
-        font-size: 1.8rem; /* Smaller text size on mobile */
-    }
-
-   
-    .glitch {
-        font-size: 1.8rem; /* Smaller text size on mobile */
+        font-size: 1.8rem;
     }
 
     header {
-        padding: 0.8rem; /* Adjust padding for smaller screens */
+        padding: 0.8rem;
     }
 
     main {
         padding: 1.5rem;
-        margin-top: 80px; /* Adjust margin for better spacing on mobile */
+        margin-top: 80px;
     }
 
     footer {
-        padding: 0.8rem; /* Adjust footer padding for smaller screens */
+        padding: 0.8rem;
     }
 
-    /* Make the nav menu stack vertically on smaller screens */
     nav ul li {
         display: block;
         text-align: center;
@@ -195,19 +158,19 @@ ul li:hover {
 /* Additional responsive tweaks for very small screens */
 @media (max-width: 480px) {
     .glitch {
-        font-size: 1.4rem; /* Further reduced size for very small screens */
+        font-size: 1.4rem;
     }
 
     header h1 {
-        font-size: 1.5rem; /* Make header title smaller for small screens */
+        font-size: 1.5rem;
     }
 
     nav ul li {
-        margin: 0.5rem 0; /* Tighter spacing between nav items */
+        margin: 0.5rem 0;
     }
 
     main {
         padding: 1rem;
-        margin-top: 60px; /* Smaller top margin */
+        margin-top: 60px;
     }
 }
