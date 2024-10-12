@@ -3,36 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNECSC</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="refresh" content="5;url=index.html">
+    <title>Loading Screen</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        .ascii-container {
+            text-align: center;
+        }
+
+        .ascii-art {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            white-space: pre-wrap; /* Ensures the ASCII art displays properly */
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to UNECSC</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>
-                <strong>"Building a Secure Tomorrow, Today."</strong><br>
-                We are UNECSC, a student-run cybersecurity club at the University of New England.<br>
-                Our mission is to promote cybersecurity awareness and provide valuable hands-on experience through hacking challenges, workshops, and projects.<br>
-                Whether you're a student or a guest, you're welcome to explore and enhance your cyber defense skills with us.
-            </p>
-            <h3 class="glitch" data-text="WEBSITE UNDER CONSTRUCTION">WEBSITE UNDER CONSTRUCTION</h3>
-        </br>
-            <p>UNECSC Is a club pending  affiliation with UNE.</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 UNECSC Cyber Security Club</p>
-    </footer>
+
+<div class="ascii-container">
+    <!-- ASCII Art for UNECSC -->
+    <div class="ascii-art">
+        <pre>
+             _____                    _____                    _____                    _____                    _____                    _____          
+            /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \         
+           /::\____\                /::\____\                /::\    \                /::\    \                /::\    \                /::\    \        
+          /:::/    /               /::::|   |               /::::\    \              /::::\    \              /::::\    \              /::::\    \       
+         /:::/    /               /:::::|   |              /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \      
+        /:::/    /               /::::::|   |             /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \     
+       /:::/    /               /:::/|::|   |            /:::/__\:::\    \        /:::/  \:::\    \        /:::/__\:::\    \        /:::/  \:::\    \    
+      /:::/    /               /:::/ |::|   |           /::::\   \:::\    \      /:::/    \:::\    \       \:::\   \:::\    \      /:::/    \:::\    \   
+     /:::/    /      _____    /:::/  |::|   | _____    /::::::\   \:::\    \    /:::/    / \:::\    \    ___\:::\   \:::\    \    /:::/    / \:::\    \  
+    /:::/____/      /\    \  /:::/   |::|   |/\    \  /:::/\:::\   \:::\    \  /:::/    /   \:::\    \  /\   \:::\   \:::\    \  /:::/    /   \:::\    \ 
+   |:::|    /      /::\____\/:: /    |::|   /::\____\/:::/__\:::\   \:::\____\/:::/____/     \:::\____\/::\   \:::\   \:::\____\/:::/____/     \:::\____\
+   |:::|____\     /:::/    /\::/    /|::|  /:::/    /\:::\   \:::\   \::/    /\:::\    \      \::/    /\:::\   \:::\   \::/    /\:::\    \      \::/    /
+    \:::\    \   /:::/    /  \/____/ |::| /:::/    /  \:::\   \:::\   \/____/  \:::\    \      \/____/  \:::\   \:::\   \/____/  \:::\    \      \/____/ 
+     \:::\    \ /:::/    /           |::|/:::/    /    \:::\   \:::\    \       \:::\    \               \:::\   \:::\    \       \:::\    \             
+      \:::\    /:::/    /            |::::::/    /      \:::\   \:::\____\       \:::\    \               \:::\   \:::\____\       \:::\    \            
+       \:::\__/:::/    /             |:::::/    /        \:::\   \::/    /        \:::\    \               \:::\  /:::/    /        \:::\    \           
+        \::::::::/    /              |::::/    /          \:::\   \/____/          \:::\    \               \:::\/:::/    /          \:::\    \          
+         \::::::/    /               /:::/    /            \:::\    \               \:::\    \               \::::::/    /            \:::\    \         
+          \::::/    /               /:::/    /              \:::\____\               \:::\____\               \::::/    /              \:::\____\        
+           \::/____/                \::/    /                \::/    /                \::/    /                \::/    /                \::/    /        
+            ~~                       \/____/                  \/____/                  \/____/                  \/____/                  \/____/         
+                                                                                                                                                         
+                                                 
+        </pre>
+    </div>
+
+    <!-- Loading Text -->
+    <div class="loading-text">
+        Loading... Please wait<span class="blink">_</span>
+    </div>
+</div>
+
 </body>
 </html>
