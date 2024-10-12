@@ -1,12 +1,35 @@
 /* General body styles */
 body {
     background: linear-gradient(145deg, #0d0d0d, #000000);
+    background-size: cover;
+    background-position: 0 0;
     color: #00ff00;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    height: 100vh; /* Ensures the entire height of the page is covered */
+    animation: scrollBackground 10s linear infinite; /* Infinite scrolling background */
     text-shadow: 0 0 1px #00ff00;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 1000px; /* Adjust for speed of scroll */
+    }
+}
+
+/* Keep header, main content, and footer fixed in place */
+header, main, footer {
+    position: fixed;
+    width: 100%;
+    z-index: 1; /* Ensure they stay on top of the background */
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header {
@@ -44,6 +67,7 @@ main {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    top: 50px; /* Adjust as needed */
 }
 
 footer {
@@ -52,6 +76,8 @@ footer {
     border-top: 1px solid #00ff00;
     background-color: rgba(0, 0, 0, 0.8);
     text-shadow: 0 0 2px #00ff00;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Section styling */
@@ -59,6 +85,7 @@ section {
     margin: 50px auto;
     width: 80%;
     text-align: center;
+    z-index: 2;
 }
 
 ul li {
