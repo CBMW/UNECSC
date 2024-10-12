@@ -10,14 +10,12 @@ body {
     min-height: 100vh;
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
     display: flex;
-    flex-direction: column; /* Flexbox for proper footer positioning */
-    justify-content: space-between; /* Ensure main and footer are separated */
+    flex-direction: column;
 }
 
-/* Adjust header and z-index for better menu interaction */
+/* Header styles */
 header {
     position: relative;
-    z-index: 10;
     text-align: center;
     padding: 1rem;
     border-bottom: 1px solid #00ff33;
@@ -30,7 +28,6 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    z-index: 100; /* Ensure links are clickable */
 }
 
 nav ul li {
@@ -51,14 +48,13 @@ nav ul li a:hover {
 }
 
 main {
-    flex-grow: 1; /* Ensure main content takes up the available space */
+    flex: 1; /* Ensure main takes up remaining space */
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    z-index: 1; /* Ensure it's above the footer */
 }
 
-/* Fix footer positioning */
+/* Footer styles */
 footer {
     text-align: center;
     padding: 1rem;
@@ -66,9 +62,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.85);
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
     width: 100%;
-    position: absolute; /* Stick it to the bottom */
-    bottom: 0;
-    z-index: 1; /* Ensure footer is behind the main content */
 }
 
 /* Section styling */
@@ -89,7 +82,7 @@ section {
     text-shadow: 0 0 2px #00ff33, 0 0 4px #00ff33;
 }
 
-/* Make the site more responsive for mobile */
+/* Responsive for mobile */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
@@ -106,7 +99,6 @@ section {
 
     main {
         padding: 1.5rem;
-        margin-top: 80px;
     }
 
     footer {
@@ -120,7 +112,7 @@ section {
     }
 }
 
-/* Additional responsive tweaks for very small screens */
+/* Very small screen adjustments */
 @media (max-width: 480px) {
     .glitch {
         font-size: 1.4rem;
@@ -136,6 +128,5 @@ section {
 
     main {
         padding: 1rem;
-        margin-top: 60px;
     }
 }
