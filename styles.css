@@ -3,14 +3,14 @@ body {
     background: linear-gradient(145deg, #0d0d0d, #000000);
     background-size: cover;
     background-position: 0 0;
-    color: #00ff00;
+    color: #00ff33; /* Brighter neon green */
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100vh; /* Ensures the entire height of the page is covered */
     animation: scrollBackground 10s linear infinite; /* Infinite scrolling background */
-    text-shadow: 0 0 1px #00ff00;
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Stronger glowing effect */
 }
 
 @keyframes scrollBackground {
@@ -35,10 +35,10 @@ header, main, footer {
 header {
     text-align: center;
     padding: 1rem;
-    border-bottom: 1px solid #00ff00;
-    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #00ff33;
+    background-color: rgba(0, 0, 0, 0.85); /* Increased background opacity for better contrast */
     box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
-    text-shadow: 0 0 2px #00ff00;
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Brighter shadow for the header */
 }
 
 nav ul {
@@ -52,20 +52,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00ff00;
+    color: #00ff33; /* Brighter neon green */
     text-decoration: none;
-    text-shadow: 0 0 1px #00ff00;
+    text-shadow: 0 0 3px #00ff33, 0 0 6px #00ff33; /* Brighter text shadow for links */
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: red;
-    text-shadow: 0 0 4px red;
+    text-shadow: 0 0 5px red; /* Stronger hover effect */
 }
 
 main {
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.85); /* Increased opacity of the background for better contrast */
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
     top: 50px; /* Adjust as needed */
 }
@@ -73,9 +73,9 @@ main {
 footer {
     text-align: center;
     padding: 1rem;
-    border-top: 1px solid #00ff00;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-shadow: 0 0 2px #00ff00;
+    border-top: 1px solid #00ff33;
+    background-color: rgba(0, 0, 0, 0.85); /* Increased opacity */
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Softer and brighter footer text shadow */
     bottom: 0;
     width: 100%;
 }
@@ -90,24 +90,24 @@ section {
 
 ul li {
     padding: 10px;
-    border-bottom: 1px solid #00ff00;
+    border-bottom: 1px solid #00ff33;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul li:hover {
     background-color: #1a1a1a;
-    color: #00ff00;
+    color: #00ff33;
 }
 
 /* Glitch effect for "Website Under Construction" */
 .glitch {
     font-size: 2.5rem;
     position: relative;
-    color: #00ff00;
+    color: #00ff33; /* Brighter neon green */
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Reduced the blur on the glitch effect */
     animation: flicker 0.8s infinite alternate;
 }
 
