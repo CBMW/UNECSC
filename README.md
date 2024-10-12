@@ -12,20 +12,20 @@ Welcome to the official repository for the University of New England Cyber Secur
 
 ## Files
 
-### contact.html
-- **Description:** Update contact.html
+### index.html
+- **Description:** Main landing page for official website
 - **Last Updated:** Oct 11, 2024
 
-### index.html
-- **Description:** Update index.html
+### contact.html
+- **Description:** Contacts page on official website
 - **Last Updated:** Oct 11, 2024
 
 ### projects.html
-- **Description:** Update projects.html
+- **Description:** Projects page for official website
 - **Last Updated:** Oct 11, 2024
 
 ### styles.css
-- **Description:** Styles for the website
+- **Description:** CSS Styles for the website
 
 ### main.py
 - **Description:** Python program to automate club activities
