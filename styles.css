@@ -11,6 +11,7 @@ body {
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
     display: flex;
     flex-direction: column; /* Flexbox for proper footer positioning */
+    justify-content: space-between; /* Ensure main and footer are separated */
 }
 
 /* Adjust header and z-index for better menu interaction */
@@ -29,6 +30,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index: 100; /* Ensure links are clickable */
 }
 
 nav ul li {
@@ -53,8 +55,10 @@ main {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    z-index: 1; /* Ensure it's above the footer */
 }
 
+/* Fix footer positioning */
 footer {
     text-align: center;
     padding: 1rem;
@@ -62,8 +66,9 @@ footer {
     background-color: rgba(0, 0, 0, 0.85);
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33;
     width: 100%;
-    position: relative;
+    position: absolute; /* Stick it to the bottom */
     bottom: 0;
+    z-index: 1; /* Ensure footer is behind the main content */
 }
 
 /* Section styling */
