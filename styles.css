@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    text-shadow: 0 0 1px #00ff00; /* Reduced glow */
+    text-shadow: 0 0 1px #00ff00;
 }
 
 header {
@@ -31,13 +31,13 @@ nav ul li {
 nav ul li a {
     color: #00ff00;
     text-decoration: none;
-    text-shadow: 0 0 1px #00ff00; /* Reduced link glow */
+    text-shadow: 0 0 1px #00ff00;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: red;
-    text-shadow: 0 0 3px red;
+    text-shadow: 0 0 4px red;
 }
 
 main {
@@ -51,7 +51,7 @@ footer {
     padding: 1rem;
     border-top: 1px solid #00ff00;
     background-color: rgba(0, 0, 0, 0.8);
-    text-shadow: 0 0 1px #00ff00; /* Reduced footer glow */
+    text-shadow: 0 0 2px #00ff00;
 }
 
 /* Section styling */
@@ -74,14 +74,14 @@ ul li:hover {
 
 /* Glitch effect for "Website Under Construction" */
 .glitch {
-    font-size: 2rem;
+    font-size: 2.5rem;
     position: relative;
     color: #00ff00;
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 2px #00ff00, 0 0 4px #00ff00; /* Reduced glitch text glow */
-    animation: flicker 1.5s infinite alternate;
+    text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+    animation: flicker 0.8s infinite alternate;
 }
 
 .glitch:before, .glitch:after {
@@ -89,33 +89,46 @@ ul li:hover {
     position: absolute;
     left: 0;
     color: green;
-    text-shadow: -1px 0 red, 0 1px cyan; /* Reduced shadow intensity */
+    text-shadow: -2px 0 red, 2px 0 cyan;
     clip: rect(0, 900px, 0, 0);
-    animation: glitch 2.5s infinite linear alternate-reverse;
+    animation: glitch 1.2s infinite linear alternate-reverse;
 }
 
 .glitch:after {
-    left: 0;
-    text-shadow: -1px 0 cyan, 1px 0 red; /* Reduced shadow intensity */
-    animation-delay: 1.25s;
+    left: 2px;
+    text-shadow: -2px 0 cyan, 2px 0 red;
+    animation-delay: 0.6s;
 }
 
 @keyframes glitch {
-    0% { clip: rect(42px, 9999px, 44px, 0); }
-    10% { clip: rect(12px, 9999px, 85px, 0); }
-    20% { clip: rect(43px, 9999px, 19px, 0); }
-    30% { clip: rect(63px, 9999px, 39px, 0); }
-    40% { clip: rect(22px, 9999px, 69px, 0); }
-    50% { clip: rect(12px, 9999px, 9px, 0); }
-    60% { clip: rect(82px, 9999px, 59px, 0); }
-    70% { clip: rect(92px, 9999px, 79px, 0); }
-    80% { clip: rect(19px, 9999px, 79px, 0); }
-    90% { clip: rect(12px, 9999px, 89px, 0); }
-    100% { clip: rect(11px, 9999px, 59px, 0); }
+    0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.3deg); }
+    5% { clip: rect(12px, 9999px, 85px, 0); transform: skew(0.5deg); }
+    10% { clip: rect(43px, 9999px, 19px, 0); transform: skew(-0.5deg); }
+    15% { clip: rect(63px, 9999px, 39px, 0); transform: skew(0.7deg); }
+    20% { clip: rect(22px, 9999px, 69px, 0); transform: skew(-0.3deg); }
+    25% { clip: rect(12px, 9999px, 9px, 0); transform: skew(0.4deg); }
+    30% { clip: rect(82px, 9999px, 59px, 0); transform: skew(-0.4deg); }
+    35% { clip: rect(92px, 9999px, 79px, 0); transform: skew(0.5deg); }
+    40% { clip: rect(19px, 9999px, 79px, 0); transform: skew(-0.7deg); }
+    45% { clip: rect(12px, 9999px, 89px, 0); transform: skew(0.6deg); }
+    50% { clip: rect(11px, 9999px, 59px, 0); transform: skew(-0.2deg); }
+    60% { clip: rect(8px, 9999px, 35px, 0); transform: skew(0.6deg); }
+    70% { clip: rect(23px, 9999px, 90px, 0); transform: skew(-0.4deg); }
+    80% { clip: rect(15px, 9999px, 45px, 0); transform: skew(0.3deg); }
+    90% { clip: rect(25px, 9999px, 55px, 0); transform: skew(-0.6deg); }
+    100% { clip: rect(5px, 9999px, 30px, 0); transform: skew(0.7deg); }
 }
 
 @keyframes flicker {
     0% { opacity: 1; }
-    50% { opacity: 0.8; }
+    10% { opacity: 0.9; }
+    20% { opacity: 0.8; }
+    30% { opacity: 1; }
+    40% { opacity: 0.95; }
+    50% { opacity: 0.7; }
+    60% { opacity: 1; }
+    70% { opacity: 0.9; }
+    80% { opacity: 1; }
+    90% { opacity: 0.85; }
     100% { opacity: 1; }
 }
