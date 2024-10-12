@@ -7,7 +7,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto; /* Fix for mobile scrolling */
     height: 100vh; /* Ensures the entire height of the page is covered */
     animation: scrollBackground 10s linear infinite; /* Infinite scrolling background */
     text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Stronger glowing effect */
@@ -22,17 +22,10 @@ body {
     }
 }
 
-/* Keep header, main content, and footer fixed in place */
-header, main, footer {
-    position: fixed;
-    width: 100%;
-    z-index: 1; /* Ensure they stay on top of the background */
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
+/* Adjust fixed positions and z-index for better menu interaction */
 header {
+    position: relative; /* Remove fixed to allow proper scrolling on mobile */
+    z-index: 10;
     text-align: center;
     padding: 1rem;
     border-bottom: 1px solid #00ff33;
@@ -44,10 +37,11 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 1rem;
 }
 
@@ -67,10 +61,11 @@ main {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85); /* Increased opacity of the background for better contrast */
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    top: 50px; /* Adjust as needed */
+    margin-top: 100px; /* Added margin to give space for header */
 }
 
 footer {
+    position: relative; /* Removed fixed positioning */
     text-align: center;
     padding: 1rem;
     border-top: 1px solid #00ff33;
@@ -85,7 +80,7 @@ section {
     margin: 50px auto;
     width: 80%;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
 }
 
 ul li {
@@ -107,24 +102,24 @@ ul li:hover {
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 5px #00ff33, 0 0 10px #00ff33; /* Reduced the blur on the glitch effect */
-    animation: flicker 0.8s infinite alternate;
+    text-shadow: 0 0 3px #00ff33, 0 0 5px #00ff33; /* Reduced the blur on the glitch effect */
+    animation: flicker 1.5s infinite alternate; /* Slower flicker */
 }
 
 .glitch:before, .glitch:after {
-    content: "WEBSITE UNDER CONSTRUCTION";
+    content: "WEBSITE BROKEN PLZ SEND HELP";
     position: absolute;
     left: 0;
     color: green;
-    text-shadow: -2px 0 red, 2px 0 cyan;
+    text-shadow: -1px 0 red, 1px 0 cyan;
     clip: rect(0, 900px, 0, 0);
-    animation: glitch 1.2s infinite linear alternate-reverse;
+    animation: glitch 2.5s infinite linear alternate-reverse; /* Slower glitch */
 }
 
 .glitch:after {
     left: 2px;
-    text-shadow: -2px 0 cyan, 2px 0 red;
-    animation-delay: 0.6s;
+    text-shadow: -1px 0 cyan, 1px 0 red;
+    animation-delay: 1s; /* Reduced delay to make it less aggressive */
 }
 
 @keyframes glitch {
@@ -158,4 +153,61 @@ ul li:hover {
     80% { opacity: 1; }
     90% { opacity: 0.85; }
     100% { opacity: 1; }
+}
+
+/* Make the site more responsive for mobile */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .glitch {
+        font-size: 1.8rem; /* Smaller text size on mobile */
+    }
+
+   
+    .glitch {
+        font-size: 1.8rem; /* Smaller text size on mobile */
+    }
+
+    header {
+        padding: 0.8rem; /* Adjust padding for smaller screens */
+    }
+
+    main {
+        padding: 1.5rem;
+        margin-top: 80px; /* Adjust margin for better spacing on mobile */
+    }
+
+    footer {
+        padding: 0.8rem; /* Adjust footer padding for smaller screens */
+    }
+
+    /* Make the nav menu stack vertically on smaller screens */
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Additional responsive tweaks for very small screens */
+@media (max-width: 480px) {
+    .glitch {
+        font-size: 1.4rem; /* Further reduced size for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Make header title smaller for small screens */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Tighter spacing between nav items */
+    }
+
+    main {
+        padding: 1rem;
+        margin-top: 60px; /* Smaller top margin */
+    }
 }
