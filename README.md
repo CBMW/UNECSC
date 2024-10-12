@@ -47,7 +47,7 @@ Details about our various projects are listed [here](projects.html).
 
 Our website styling is managed through this CSS file: [styles.css](styles.css).
 
-## Python Club Dashboard UI
+## Club UI python program
 
 Our main automation script can be found [here](main.py).
 
