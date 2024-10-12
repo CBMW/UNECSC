@@ -4,8 +4,8 @@ Welcome to the official repository for the University of New England Cyber Secur
 
 ## Table of Contents
 
-- [Contact](#contact)
 - [Index](#index)
+- [Contact](#contact)
 - [Projects](#projects)
 - [Styles](#styles)
 - [Main Program](#main-program)
@@ -31,13 +31,13 @@ Welcome to the official repository for the University of New England Cyber Secur
 - **Description:** Python program to automate club activities
 - **Last Updated:** Oct 12, 2024
 
-## Contact
-
-For any questions or suggestions, please feel free to reach out through our contact page [here](contact.html).
-
 ## Index
 
 You can find the main entry point of our website [here](index.html).
+
+## Contact
+
+For any questions or suggestions, please feel free to reach out through our contact page [here](contact.html).
 
 ## Projects
 
